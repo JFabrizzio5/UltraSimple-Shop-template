@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Tienda Online</title>
+  <!-- Enlace a Bootstrap CSS en modo oscuro -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #343a40; /* Color de fondo oscuro */
+      color: #fff; /* Color de texto claro */
+    }
+    .navbar {
+      background-color: #6f42c1; /* Color morado claro para el header */
+    }
+    .navbar-dark .navbar-toggler-icon {
+      background-color: #fff;
+    }
+    .navbar-dark .navbar-brand {
+      color: #fff;
+    }
+    .navbar-dark .navbar-nav .nav-link {
+      color: #fff;
+    }
+    .jumbotron {
+      background-color: #343a40; /* Color de fondo oscuro para la sección de bienvenida */
+      margin-top: 56px; /* Ajustar la separación desde el navbar */
+    }
+    .card {
+      background-color: #495057; /* Color de fondo oscuro para las tarjetas */
+      border: 1px solid #343a40; /* Borde oscuro */
+      margin-bottom: 20px;
+    }
+    .modal-content {
+      background-color: #495057; /* Color de fondo oscuro para el modal */
+      color: #fff; /* Color de texto claro para el modal */
+    }
+    .form-inline {
+      margin-left: auto; /* Mover la barra de búsqueda al lado izquierdo */
+      margin-right: auto; /* Centrar la barra de búsqueda en la vista de escritorio */
+    }
+    @media (max-width: 576px) {
+      /* Estilos específicos para pantallas pequeñas (vista para celulares) */
+      .navbar-toggler {
+        border-color: #fff; /* Agregar un borde blanco al botón del menú */
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      
+     <H1>POLIMARKET</H1>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Productos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" data-toggle="modal" data-target="#chatModal">Chat</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="#">Carrito</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Bienvenida -->
+<div class="jumbotron text-center">
+  <h1 class="display-4">¡Bienvenido a nuestra Tienda Online!</h1>
+
+</div>
+
+<!-- Contenido de la página -->
+<div class="container mt-3">
+  <!-- Barra de filtros (lado izquierdo) -->
+  <div class="row">
+    <div class="col-md-3 mb-4">
+      <h5>Filtros</h5>
+      <!-- Agrega tus opciones de filtro aquí -->
+      <div class="form-group">
+        <form class="form-inline">
+          <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar">
+         <br>
+        <label for="categoria">Categoría:</label>
+        <select class="form-control" id="categoria">
+          <option>Todas</option>
+          <option>Categoría 1</option>
+          <option>Categoría 2</option>
+          <option>Categoría 3</option>
+        </select>
+      </div>
+      <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Buscar</button>
+    </form>
+      <!-- Agrega más opciones de filtro según tus necesidades -->
+    </div>
+    <!-- Fin de la barra de filtros -->
+
+    <!-- Productos de la tienda (puedes repetir este bloque para cada producto) -->
+    <div class="col-md-3 mb-4">
+      <div class="card">
+        <img src="https://via.placeholder.com/300" class="card-img-top" alt="Producto" data-toggle="modal" data-target="#productoModal">
+        <div class="card-body">
+          <h5 class="card-title">Nombre del Producto</h5>
+          <p class="card-text">Descripción corta del producto. Este es un marcador de posición y debe ser reemplazado con información real.</p>
+          <a href="" class="btn btn-primary" data-toggle="modal" data-target="#productoModal">Ver Detalles</a>
+        </div>
+      </div>
+    </div>
+        <!-- Productos de la tienda (puedes repetir este bloque para cada producto) -->
+        <div class="col-md-3 mb-4">
+          <div class="card">
+            <img src="https://via.placeholder.com/300" class="card-img-top" alt="Producto" data-toggle="modal" data-target="#productoModal">
+            <div class="card-body">
+              <h5 class="card-title">Nombre del Producto</h5>
+              <p class="card-text">Descripción corta del producto. Este es un marcador de posición y debe ser reemplazado con información real.</p>
+              <a href="#" class="btn btn-primary">Ver Detalles</a>
+            </div>
+          </div>
+        </div>    <!-- Productos de la tienda (puedes repetir este bloque para cada producto) -->
+        <div class="col-md-3 mb-4">
+          <div class="card">
+            <img src="https://via.placeholder.com/300" class="card-img-top" alt="Producto" data-toggle="modal" data-target="#productoModal">
+            <div class="card-body">
+              <h5 class="card-title">Nombre del Producto</h5>
+              <p class="card-text">Descripción corta del producto. Este es un marcador de posición y debe ser reemplazado con información real.</p>
+              <a href="#" class="btn btn-primary">Ver Detalles</a>
+            </div>
+          </div>
+        </div>
+    <!-- Fin del bloque del producto -->
+
+    <!-- Repite este bloque para más productos -->
+  </div>
+</div>
+
+<!-- Modal para detalles del producto -->
+<div class="modal fade" id="productoModal" tabindex="-1" role="dialog" aria-labelledby="productoModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="productoModalLabel">Detalles del Producto</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <img src="https://via.placeholder.com/400" class="img-fluid" alt="Producto">
+        <h2>Nombre del Producto</h2>
+        <p>Descripción detallada del producto. Este es un marcador de posición y debe ser reemplazado con información real.</p>
+        <p><strong>Precio:</strong> $XX.XX</p>
+        <p><strong>Disponibilidad:</strong> En stock</p>
+        <button class="btn btn-primary">Agregar al Carrito</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Chat Modal -->
+<div class="modal fade" id="chatModal" tabindex="-1" role="dialog" aria-labelledby="chatModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="chatModalLabel">Mensajes</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <ul class="nav nav-tabs" id="myTabs" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="chat1-tab" data-toggle="tab" href="#chat1" role="tab" aria-controls="chat1" aria-selected="true">Chat 1</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="chat2-tab" data-toggle="tab" href="#chat2" role="tab" aria-controls="chat2" aria-selected="false">Chat 2</a>
+          </li>
+        </ul>
+        <div class="tab-content mt-2" id="myTabsContent">
+          <div class="tab-pane fade show active" id="chat1" role="tabpanel" aria-labelledby="chat1-tab">
+            <!-- Contenido del chat 1 -->
+            <ul>
+              <li>Emisor 1: Hola, ¿cómo estás?</li>
+              <li>Receptor 1: ¡Hola! Estoy bien, gracias.</li>
+              <!-- Añade más mensajes según sea necesario -->
+            </ul>
+          </div>
+          <div class="tab-pane fade" id="chat2" role="tabpanel" aria-labelledby="chat2-tab">
+            <!-- Contenido del chat 2 -->
+            <ul>
+              <li>Emisor 2: ¿Qué tal va todo?</li>
+              <li>Receptor 2: Todo bien, gracias.</li>
+              <!-- Añade más mensajes según sea necesario -->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- Enlace a Bootstrap JS y Popper.js (necesarios para algunos componentes de Bootstrap) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.9/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
